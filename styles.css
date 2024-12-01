@@ -57,7 +57,7 @@ button:hover {
   position: relative;
   width: 350px;
   height: 100%;
-  background-image: url('/assets/road.png'), linear-gradient(to bottom, transparent 50%, #fff 50%);
+  background-image: url('assets/road.png');
   background-size: 100% auto, 100% 30px;
   background-repeat: repeat-y, repeat-y;
   background-position: 0 0, 0 0;
