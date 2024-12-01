@@ -80,7 +80,7 @@ function startGame() {
 
   
   document.getElementById('game-ui').style.display = 'flex';
-  pauseBtn.innerHTML = '⏸︎ ';
+  pauseBtn.innerHTML = '&#124; &#124;';
 
   initializeDynamicLanes();
   moveCarToLane(carLane);
@@ -121,7 +121,7 @@ function pauseGame() {
 // Resume the game
 function resumeGame() {
   gamePaused = false;
-  pauseBtn.innerHTML = '⏸︎';
+  pauseBtn.innerHTML = '&#124; &#124;';
   pauseMenu.style.display = 'none'; // Hide pause menu
   startGameIntervals();
 }
