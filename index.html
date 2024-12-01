@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eda's Car Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/icon.png" type="image/png">
+</head>
+<body>
+  <!-- Start Menu -->
+  <div id="start-menu">
+    <h1>Eda's Car Game</h1>
+
+    <h2 id="high-score">High-Score: </h2>
+    <button id="start-btn">Start Game</button>
+    <div id="tutorial">
+      <p>Use Arrow Keys to Move. Press Space for Barrier!</p>
+    </div>
+  </div>
+  
+  <div id="game-ui" style="display: none;">
+    <div class="ui"><div id="score-ui">Score: 0</div>
+    <div id="barrier-ui">Barriers: 3</div>
+    <button id="pause-btn">&#9658;</button></div>
+    
+  </div>
+  
+  <div id="pause-menu" style="display: none;">
+    <h2>Paused</h2>
+    <button id="resume-btn">&#9658;</button>
+  </div>
+  
+  <div id="game-over" style="display: none;">
+    <h2>Game Over</h2>
+    <p id="final-score">Score: 0</p>
+    <button id="restart-btn">Restart</button>
+  </div>
+  
+  <div id="game-container">
+    <div id="car"></div>
+  </div>
+  
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
