@@ -77,7 +77,7 @@ function startGame() {
   gameOverText.style.display = 'none';
   pauseMenu.style.display = 'none'; // Hide pause menu
   gameContainer.style.display = 'flex';
-  console.log(gameContainer);
+
   
   document.getElementById('game-ui').style.display = 'flex';
   pauseBtn.innerHTML = '⏸︎ ';
@@ -358,7 +358,12 @@ document.body.addEventListener('click', (e) => {
   
   
   // Check if the click is outside the gameContainer
-  if (gameRunning && !gamePaused && e.target === e.currentTarget) {
+
+  
+  
+  if (gameRunning && !gamePaused && e.target == e.currentTarget) {
+
+    
     pauseGame();
   }
 });
