@@ -8,7 +8,7 @@ const startBtn = document.getElementById('start-btn');
 const restartBtn = document.getElementById('restart-btn');
 const pauseBtn = document.getElementById('pause-btn');
 const finalScoreText = document.getElementById('final-score');
-const tutorial = document.getElementById('tutorial');
+
 const highScoreText = document.getElementById('high-score');
 const pauseMenu = document.getElementById('pause-menu'); // Added for pause menu
 const resumeBtn = document.getElementById('resume-btn');

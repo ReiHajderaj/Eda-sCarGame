@@ -118,6 +118,12 @@ button:hover {
   border-radius: 5px;
 }
 
+
+#tutorial {
+  width: 300px ;
+  text-align: justify;
+  line-height: 30px;
+}
 .obstacle {
   position: absolute;
 
