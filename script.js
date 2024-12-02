@@ -392,17 +392,22 @@ function handleTouchEnd(e) {
   const touchEndX = touch.clientX;
   const touchEndY = touch.clientY;
 
+  const deltaX = touchEndX - touchStartX;
+  const deltaY = touchEndY - touchStartY;
+
   // Detect swipe direction
-  const swipeThreshold = 15; // Minimum distance to detect a swipe
+  const swipeThreshold = 20; // Minimum horizontal distance for swipe detection
+  const verticalThreshold = 50;
 
   // Horizontal swipe (left or right)
-  if (Math.abs(touchEndX - touchStartX) > swipeThreshold && Math.abs(touchEndY - touchStartY) < swipeThreshold) {
-    if (touchEndX < touchStartX && carLane > 0) { // Swipe left
-      moveCarToLane(carLane - 1);
-    } else if (touchEndX > touchStartX && carLane < numberOfLanes - 1) { // Swipe right
-      moveCarToLane(carLane + 1);
+  
+    if (Math.abs(deltaX) > swipeThreshold && Math.abs(deltaY) < verticalThreshold) {
+      if (deltaX < 0 && carLane > 0) { // Swipe left
+        moveCarToLane(carLane - 1);
+      } else if (deltaX > 0 && carLane < numberOfLanes - 1) { // Swipe right
+        moveCarToLane(carLane + 1);
+      }
     }
-  }
 
   // Detect double-tap for barrier activation
   const currentTime = new Date().getTime();
