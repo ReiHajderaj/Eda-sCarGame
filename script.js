@@ -393,7 +393,7 @@ function handleTouchEnd(e) {
   const touchEndY = touch.clientY;
 
   // Detect swipe direction
-  const swipeThreshold = 30; // Minimum distance to detect a swipe
+  const swipeThreshold = 15; // Minimum distance to detect a swipe
 
   // Horizontal swipe (left or right)
   if (Math.abs(touchEndX - touchStartX) > swipeThreshold && Math.abs(touchEndY - touchStartY) < swipeThreshold) {
